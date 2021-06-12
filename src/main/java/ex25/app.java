@@ -89,7 +89,6 @@ public class app {
 
         else if (passwordValidator(password) == 3)
             return ("The password " + password + " is a strong password");
-
         else
             return ("The password " + password + " is a very strong password");
 
