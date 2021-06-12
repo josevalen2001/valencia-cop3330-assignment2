@@ -73,6 +73,7 @@ public class app {
 
     public static String output(String s1, String s2) {
 
+        //Return the correct string depending on if the words are anagrams or not
         if(isAnagram(s1, s2))
             return ("\"" + s1 + "\" and " + "\"" + s2 + "\" are anagrams.");
 

@@ -20,17 +20,7 @@ public class app {
         password = newScan.nextLine();
 
         //Output
-        if (passwordValidator(password) == 1)
-            System.out.println("The password " + password + " is a very weak password");
-
-        else if (passwordValidator(password) == 2)
-            System.out.println("The password " + password + " is a weak password");
-
-        else if (passwordValidator(password) == 3)
-            System.out.println("The password " + password + " is a strong password");
-
-        else if (passwordValidator(password) == 4)
-            System.out.println("The password " + password + " is a very strong password");
+        System.out.println(output(password));
 
     }
 
@@ -85,6 +75,23 @@ public class app {
 
         //Return the strength of the password
         return strength;
+
+    }
+
+    public static String output(String password) {
+
+        //Return the correct output statement depending on the strength of the password
+        if (passwordValidator(password) == 1)
+            return ("The password " + password + " is a very weak password");
+
+        else if (passwordValidator(password) == 2)
+            return ("The password " + password + " is a weak password");
+
+        else if (passwordValidator(password) == 3)
+            return ("The password " + password + " is a strong password");
+
+        else
+            return ("The password " + password + " is a very strong password");
 
     }
 
