@@ -27,8 +27,7 @@ public class app {
         s2 = newScan.nextLine();
 
         //Output
-        if(isAnagram(s1, s2))
-            System.out.println("\"" + s1 + "\" and " + "\"" + s2 + "\" are anagrams.");
+        System.out.println(output(s1, s2));
 
     }
 
@@ -70,6 +69,14 @@ public class app {
         //Return
         return isAnagram;
 
+    }
+
+    public static String output(String s1, String s2) {
+
+        if(isAnagram(s1, s2))
+            return ("\"" + s1 + "\" and " + "\"" + s2 + "\" are anagrams.");
+
+        return ("\"" + s1 + "\" and " + "\"" + s2 + "\" are not anagrams.");
     }
 
 }
