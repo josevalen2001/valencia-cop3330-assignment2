@@ -48,6 +48,8 @@ public class app {
 
         if(zipCode.length() == 0)
             return false;
+        if(zipCode.length() > 5)
+            return false;
 
         for(int i = 0; i < zipCode.length(); i++)
             if(!(Character.isDigit(zipCode.charAt(i))))
@@ -59,6 +61,9 @@ public class app {
 
     //Checks if the employee ID is valid
     public static boolean isEmployeeIdValid(String employeeID){
+
+        if(employeeID.length() == 0)
+            return false;
 
         if(employeeID.length() != 7)
             return false;
