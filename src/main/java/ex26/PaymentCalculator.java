@@ -9,11 +9,6 @@ import java.lang.Math;
 
 public class PaymentCalculator {
 
-    public static void main(String[] args) {
-
-        int m = calculateMonthsUntilPaidOff(12, 5000, 100);
-        System.out.println(m);
-    }
 
    public static int calculateMonthsUntilPaidOff (double interestRate, double balance, double payment) {
 

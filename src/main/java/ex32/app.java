@@ -50,7 +50,7 @@ public class app {
                 numGuesses++;
             }
             else if(guessStatus(answer, guess) == 1){
-                System.out.print("Too low. Guess again: ");
+                System.out.print("Too high. Guess again: ");
                 guess = Integer.parseInt(newScan.nextLine());
                 numGuesses++;
             }
