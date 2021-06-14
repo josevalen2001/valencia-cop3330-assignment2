@@ -22,17 +22,14 @@ public class app {
         System.out.print("What is the monthly payment you can make? ");
         double interestRate = newScan.nextDouble();
 
-        //Calculation and output
-        System.out.println(output(interestRate, balance, payment));
+        System.out.println(output(balance, payment, interestRate));
 
     }
 
     public static int output(double interestRate, double balance, double payment) {
 
-        PaymentCalculator paymentCalculator = new PaymentCalculator();
-        int months = (int) Math.ceil((paymentCalculator.calculateMonthsUntilPaidOff(interestRate, balance, payment)));
+        int months = PaymentCalculator.calculateMonthsUntilPaidOff(interestRate, balance, payment);
         System.out.println(months);
-
         return months;
     }
 
